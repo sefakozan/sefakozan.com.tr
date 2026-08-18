@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Sefa Kozan</title>
+	<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+	<link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+	<div class="page body-copy">
+		<header class="masthead">
+			<h1 class="masthead-title">Sefa Kozan</h1>
+			<nav class="masthead-nav" aria-label="Primary">
+				<a class="nav-primary active" href="/tr/">Ana Sayfa</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
+
+				<a class="nav-primary" href="/tr/building/">Projeler</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
+
+				<a href="../SefaKozan-CV-TR.pdf" target="_blank" rel="noreferrer">Özgeçmiş</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
+
+				<a href="https://leetcode.com/u/Kozan-/" target="_blank" rel="noreferrer">LeetCode</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
+
+				<a href="https://www.linkedin.com/in/sefakozan" target="_blank" rel="noreferrer">LINKEDIN</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
+
+				<a href="https://github.com/sefakozan" target="_blank" rel="noreferrer">GITHUB</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
+
+				<a class="nav-lang" href="/" aria-label="İngilizceye geç">
+					<img src="../res/us.svg" alt="" aria-hidden="true" class="language-flag">
+				</a>
+
+				<span class="nav-dot" aria-hidden="true">/</span>
+
+				<a class="nav-lang active" href="/tr/" aria-label="Mevcut dil: Türkçe">
+					<img src="../res/tr.svg" alt="" aria-hidden="true" class="language-flag">
+				</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="intro-grid">
+				<div class="intro-copy">
+					<p>Merhaba, ben Sefa. Tanıştığımıza memnun oldum! <br><a class="accent-link">Fırat Üniversitesi</a>
+						Yazılım Mühendisliği bölümü 2. sınıf öğrencisiyim.</p>
+
+					<p>Mükemmellik için optimize etmeyi seviyorum. Benim için bu, alışkanlıklarımı, projelerimi,
+						standartlarımı ve çevremi her gün daha iyi olmaya yönlendirmek anlamına geliyor.
+						Bu, başarısızlıkla öğrenmek ve yeteneğimi, derinliğimi ve karakterimi keskinleştirmek demek,
+						böylece başarıyı hedef değil bir yan ürün haline getirmek.
+					</p>
+
+					<p>Java/Spring Boot ile backend, Golang ile yüksek performanslı ve modüler sistemler geliştiren;
+						LLM/RAG gibi AI teknolojilerine odaklanan bir yazılım mühendisi adayıyım.
+						Algoritma ve problem çözme becerilerimi güncel projelerle sürekli geliştiriyorum.
+						Geliştirme sürecimde AI teknolojileri etkili bir şekilde kullanarak öğrenme hızımı artırıyor,
+						kod kalitemi yükseltiyor ve problemleri daha verimli çözüyorum.
+					</p>
+
+					<p>Bunun dışında, dünyada yeni yerler görmeyi seviyorum; film izlemeyi, müzik dinlemeyi, yüzmeyi,
+						yürüyüş yapmayı, spor yapmayı ve küçük şeylerde mutluluk bulmayı seviyorum. Teknolojiye olan
+						ilgim bugün olduğu yerde değil, sınırlarının ne kadar zorlanabileceğinde.
+						Arthur C. Clarke'ın özellikle beğendiğim bir alıntısı var:
+					</p>
+
+					<blockquote class="highlight-quote">
+						<p><a class="accent-link">Yeterince gelişmiş herhangi bir teknoloji sihirden ayırt
+								edilemez.</a></p>
+					</blockquote>
+				</div>
+
+				<aside class="side-col">
+					<figure class="snapshot portrait-figure">
+						<img src="../res/sefakozan-portrait.jpg" alt="Sefa Kozan portresi" />
+					</figure>
+
+					<div class="potd">
+						<h2 class="section-label">Anın Fotoğrafı</h2>
+						<figure class="snapshot">
+							<button type="button" class="potd-button" id="potd-button" aria-label="Görseli büyüt">
+								<img id="potd-img" src="../res/photos/eiffel-tower.jpg" alt="Eyfel Kulesi, Paris" />
+							</button>
+						</figure>
+						<p class="potd-note" id="potd-note"><span id="potd-location">Eyfel Kulesi, Paris</span></p>
+					</div>
+				</aside>
+			</section>
+
+			<footer class="page-footer">
+				<span>2026 &copy; Sefa Kozan</span>
+				<span>Ankara, TÜRKİYE</span>
+			</footer>
+		</main>
+	</div>
+
+	<dialog class="lightbox" id="lightbox" aria-label="Günün fotoğrafının büyütülmüş hâli">
+		<img id="lightbox-img" src="" alt="" />
+		<button type="button" class="lightbox-button lightbox-close" id="lightbox-close"
+			aria-label="Kapat">&times;</button>
+	</dialog>
+
+	<script>
+		(function () {
+			var photos = [
+				{ f: "eiffel-tower.jpg", n: "Eyfel Kulesi, Paris" },
+				{ f: "colosseum.jpg", n: "Kolezyum, Roma" },
+				{ f: "taj-mahal.jpg", n: "Tac Mahal, Agra" },
+				{ f: "great-wall-of-china.jpg", n: "Çin Seddi" },
+				{ f: "machu-picchu.jpg", n: "Machu Picchu, Peru" },
+				{ f: "pyramids-of-giza.jpg", n: "Giza Piramitleri, Mısır" },
+				{ f: "statue-of-liberty.jpg", n: "Özgürlük Heykeli, New York" },
+				{ f: "christ-the-redeemer.jpg", n: "Kurtarıcı İsa Heykeli, Rio de Janeiro" },
+				{ f: "sydney-opera-house.jpg", n: "Sidney Opera Binası, Avustralya" },
+				{ f: "petra.jpg", n: "Petra, Ürdün" },
+				{ f: "acropolis-of-athens.jpg", n: "Atina Akropolü, Yunanistan" },
+				{ f: "stonehenge.jpg", n: "Stonehenge, İngiltere" },
+				{ f: "big-ben.jpg", n: "Big Ben, Londra" },
+				{ f: "mount-fuji.jpg", n: "Fuji Dağı, Japonya" },
+				{ f: "burj-khalifa.jpg", n: "Burç Halife, Dubai" },
+				{ f: "sagrada-familia.jpg", n: "Sagrada Família, Barselona" },
+				{ f: "leaning-tower-of-pisa.jpg", n: "Pisa Kulesi, İtalya" },
+				{ f: "chichen-itza.jpg", n: "Chichen Itza, Meksika" },
+				{ f: "angkor-wat.jpg", n: "Angkor Vat, Kamboçya" },
+				{ f: "saint-basils-cathedral.jpg", n: "Aziz Basileios Katedrali, Moskova" },
+				{ f: "golden-gate-bridge.jpg", n: "Golden Gate Köprüsü, San Francisco" },
+				{ f: "grand-canyon.jpg", n: "Büyük Kanyon, Arizona" },
+				{ f: "mount-everest.jpg", n: "Everest Dağı, Himalayalar" },
+				{ f: "niagara-falls.jpg", n: "Niagara Şelaleleri, Kanada/ABD" },
+				{ f: "venice-canals.jpg", n: "Büyük Kanal, Venedik" },
+				{ f: "hagia-sophia.jpg", n: "Ayasofya, İstanbul" },
+				{ f: "cappadocia.jpg", n: "Kapadokya, Türkiye" },
+				{ f: "pamukkale.jpg", n: "Pamukkale Travertenleri, Türkiye" },
+				{ f: "ephesus.jpg", n: "Efes Antik Kenti, Türkiye" },
+				{ f: "mount-rushmore.jpg", n: "Rushmore Dağı, Güney Dakota" },
+				{ f: "victoria-falls.jpg", n: "Victoria Şelaleleri, Zambiya/Zimbabve" },
+				{ f: "iguazu-falls.jpg", n: "Iguazú Şelaleleri, Arjantin/Brezilya" },
+				{ f: "borobudur.jpg", n: "Borobudur Tapınağı, Endonezya" },
+				{ f: "alhambra.jpg", n: "El Hamra Sarayı, Granada" },
+				{ f: "neuschwanstein-castle.jpg", n: "Neuschwanstein Şatosu, Almanya" },
+				{ f: "louvre-museum.jpg", n: "Louvre Müzesi, Paris" },
+				{ f: "tower-bridge.jpg", n: "Tower Bridge, Londra" },
+				{ f: "notre-dame-paris.jpg", n: "Notre-Dame Katedrali, Paris" },
+				{ f: "mont-saint-michel.jpg", n: "Mont-Saint-Michel, Fransa" },
+				{ f: "banff-national-park.jpg", n: "Banff Ulusal Parkı, Kanada" },
+				{ f: "santorini.jpg", n: "Santorini Adası, Yunanistan" },
+				{ f: "mount-kilimanjaro.jpg", n: "Kilimanjaro Dağı, Tanzanya" },
+				{ f: "table-mountain.jpg", n: "Masa Dağı, Cape Town" },
+				{ f: "milford-sound.jpg", n: "Milford Sound, Yeni Zelanda" },
+				{ f: "forbidden-city.jpg", n: "Yasak Şehir, Pekin" },
+				{ f: "terracotta-army.jpg", n: "Toprak Askerler, Xi'an" },
+				{ f: "fushimi-inari-taisha.jpg", n: "Fushimi Inari Tapınağı, Kyoto" },
+				{ f: "kinkaku-ji.jpg", n: "Altın Köşk (Kinkaku-ji), Kyoto" },
+				{ f: "marina-bay-sands.jpg", n: "Marina Bay Sands, Singapur" },
+				{ f: "ha-long-bay.jpg", n: "Ha Long Körfezi, Vietnam" },
+				{ f: "lake-bled.jpg", n: "Bled Gölü, Slovenya" },
+				{ f: "plitvice-lakes.jpg", n: "Plitvice Gölleri, Hırvatistan" },
+				{ f: "meteora.jpg", n: "Meteora Manastırları, Yunanistan" },
+				{ f: "matterhorn.jpg", n: "Matterhorn Dağı, İsviçre" },
+				{ f: "hallstatt.jpg", n: "Hallstatt Köyü, Avusturya" },
+				{ f: "brandenburg-gate.jpg", n: "Brandenburg Kapısı, Berlin" },
+				{ f: "palace-of-versailles.jpg", n: "Versay Sarayı, Fransa" },
+				{ f: "brooklyn-bridge.jpg", n: "Brooklyn Köprüsü, New York" },
+				{ f: "empire-state-building.jpg", n: "Empire State Binası, New York" },
+				{ f: "yellowstone.jpg", n: "Yellowstone Ulusal Parkı, ABD" },
+				{ f: "yosemite-valley.jpg", n: "Yosemite Vadisi, Kaliforniya" },
+				{ f: "monument-valley.jpg", n: "Monument Valley, Arizona/Utah" },
+				{ f: "antelope-canyon.jpg", n: "Antilop Kanyonu, Arizona" },
+				{ f: "salar-de-uyuni.jpg", n: "Uyuni Tuz Düzlüğü, Bolivya" },
+				{ f: "torres-del-paine.jpg", n: "Torres del Paine, Şili" },
+				{ f: "easter-island-moai.jpg", n: "Paskalya Adası Moai Heykelleri, Şili" },
+				{ f: "perito-moreno-glacier.jpg", n: "Perito Moreno Buzulu, Arjantin" },
+				{ f: "galapagos-islands.jpg", n: "Galápagos Adaları, Ekvador" },
+				{ f: "moraine-lake.jpg", n: "Moraine Gölü, Kanada" },
+				{ f: "mount-cook.jpg", n: "Mount Cook, Yeni Zelanda" },
+				{ f: "great-barrier-reef.jpg", n: "Büyük Set Resifi, Avustralya" },
+				{ f: "uluru.jpg", n: "Uluru (Ayers Kayası), Avusturalya" },
+				{ f: "twelve-apostles.jpg", n: "On İki Havari Kayalıkları, Avustralya" },
+				{ f: "sigiriya.jpg", n: "Sigiriya Kaya Kalesi, Sri Lanka" },
+				{ f: "bagan.jpg", n: "Bagan Tapınakları, Myanmar" },
+				{ f: "shwedagon-pagoda.jpg", n: "Shwedagon Pagodası, Myanmar" },
+				{ f: "wat-arun.jpg", n: "Wat Arun Tapınağı, Bangkok" },
+				{ f: "tiger-nest-monastery.jpg", n: "Paro Taktsang (Kaplan Yuvası), Bhutan" },
+				{ f: "potala-palace.jpg", n: "Potala Sarayı, Tibet" },
+				{ f: "blue-mosque-istanbul.jpg", n: "Sultanahmet Camii, İstanbul" },
+				{ f: "sumela-monastery.jpg", n: "Sümela Manastırı, Trabzon" },
+				{ f: "mount-nemrut.jpg", n: "Nemrut Dağı, Türkiye" },
+				{ f: "mount-ararat.jpg", n: "Ağrı Dağı, Türkiye" },
+				{ f: "maidens-tower-istanbul.jpg", n: "Kız Kulesi, İstanbul" },
+				{ f: "abu-simbel.jpg", n: "Abu Simbel Tapınakları, Mısır" },
+				{ f: "karnak-temple.jpg", n: "Karnak Tapınağı, Luksor" },
+				{ f: "sahara-desert.jpg", n: "Büyük Sahra Çölü, Kuzey Afrika" },
+				{ f: "chefchaouen.jpg", n: "Şefşavun (Mavi Şehir), Fas" },
+				{ f: "marrakech.jpg", n: "Marakeş Medinası, Fas" },
+				{ f: "lalibela.jpg", n: "Lalibela Kaya Kiliseleri, Etiyopya" },
+				{ f: "avenue-of-the-baobabs.jpg", n: "Baobab Yolu, Madagaskar" },
+				{ f: "deadvlei.jpg", n: "Deadvlei Tuzlası, Namibya" },
+				{ f: "serengeti.jpg", n: "Serengeti Ulusal Parkı, Tanzanya" },
+				{ f: "tsingy-de-bemaraha.jpg", n: "Tsingy de Bemaraha, Madagaskar" },
+				{ f: "mont-blanc.jpg", n: "Mont Blanc, Alpler" },
+				{ f: "cliffs-of-moher.jpg", n: "Moher Falezleri, İrlanda" },
+				{ f: "giants-causeway.jpg", n: "Devler Kaldırımı, Kuzey İrlanda" },
+				{ f: "geirangerfjord.jpg", n: "Geiranger Fiyordu, Norveç" },
+				{ f: "vatican-st-peters.jpg", n: "Aziz Petrus Bazilikası, Vatikan" }
+			];
+			var image = document.getElementById("potd-img");
+			var locationSpan = document.getElementById("potd-location");
+			if (!image) return;
+
+			var isReload = false;
+			if (window.performance && window.performance.getEntriesByType) {
+				var navEntries = window.performance.getEntriesByType("navigation");
+				if (navEntries.length > 0 && navEntries[0].type === "reload") {
+					isReload = true;
+				}
+			}
+			if (!isReload && window.performance && window.performance.navigation) {
+				if (window.performance.navigation.type === 1) {
+					isReload = true;
+				}
+			}
+
+			var selectedIndex;
+			var savedIndex = sessionStorage.getItem("selectedPhotoIndex");
+
+			if (isReload || savedIndex === null) {
+				selectedIndex = Math.floor(Math.random() * photos.length);
+				sessionStorage.setItem("selectedPhotoIndex", selectedIndex);
+			} else {
+				selectedIndex = parseInt(savedIndex, 10);
+				if (isNaN(selectedIndex) || selectedIndex < 0 || selectedIndex >= photos.length) {
+					selectedIndex = Math.floor(Math.random() * photos.length);
+					sessionStorage.setItem("selectedPhotoIndex", selectedIndex);
+				}
+			}
+
+			var selected = photos[selectedIndex];
+
+			image.src = "../res/photos/" + selected.f;
+			image.alt = selected.n;
+			if (locationSpan) {
+				locationSpan.textContent = selected.n;
+			}
+
+			// Click the picture to expand it, uncropped, in a lightbox.
+			var dialog = document.getElementById("lightbox");
+			var button = document.getElementById("potd-button");
+			if (dialog && button && typeof dialog.showModal === "function") {
+				var expanded = document.getElementById("lightbox-img");
+
+				button.addEventListener("click", function () {
+					expanded.src = image.src;
+					expanded.alt = image.alt;
+					dialog.showModal();
+				});
+
+				document
+					.getElementById("lightbox-close")
+					.addEventListener("click", function () {
+						dialog.close();
+					});
+
+				dialog.addEventListener("click", function (event) {
+					if (event.target === dialog) {
+						dialog.close();
+					}
+				});
+			}
+		})();
+	</script>
+	<script src="../nav.js"></script>
+</body>
+
+</html>

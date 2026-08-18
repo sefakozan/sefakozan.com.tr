@@ -1,109 +1,277 @@
 <!DOCTYPE html>
-<html>
-<!--
-    
-          _____                    _____                    _____                    _____                    _____             _____          
-         /\    \                  /\    \                  /\    \                  /\    \                  /\    \           |\    \         
-        /::\    \                /::\    \                /::\    \                /::\____\                /::\    \          |:\____\        
-       /::::\    \               \:::\    \              /::::\    \              /:::/    /               /::::\    \         |::|   |        
-      /::::::\    \               \:::\    \            /::::::\    \            /:::/    /               /::::::\    \        |::|   |        
-     /:::/\:::\    \               \:::\    \          /:::/\:::\    \          /:::/    /               /:::/\:::\    \       |::|   |        
-    /:::/__\:::\    \               \:::\    \        /:::/__\:::\    \        /:::/____/               /:::/__\:::\    \      |::|   |        
-   /::::\   \:::\    \              /::::\    \       \:::\   \:::\    \      /::::\    \              /::::\   \:::\    \     |::|   |        
-  /::::::\   \:::\    \    ____    /::::::\    \    ___\:::\   \:::\    \    /::::::\____\________    /::::::\   \:::\    \    |::|___|______  
- /:::/\:::\   \:::\____\  /\   \  /:::/\:::\    \  /\   \:::\   \:::\    \  /:::/\:::::::::::\    \  /:::/\:::\   \:::\    \   /::::::::\    \ 
-/:::/  \:::\   \:::|    |/::\   \/:::/  \:::\____\/::\   \:::\   \:::\____\/:::/  |:::::::::::\____\/:::/__\:::\   \:::\____\ /::::::::::\____\
-\::/   |::::\  /:::|____|\:::\  /:::/    \::/    /\:::\   \:::\   \::/    /\::/   |::|~~~|~~~~~     \:::\   \:::\   \::/    //:::/~~~~/~~      
- \/____|:::::\/:::/    /  \:::\/:::/    / \/____/  \:::\   \:::\   \/____/  \/____|::|   |           \:::\   \:::\   \/____//:::/    /         
-       |:::::::::/    /    \::::::/    /            \:::\   \:::\    \            |::|   |            \:::\   \:::\    \   /:::/    /          
-       |::|\::::/    /      \::::/____/              \:::\   \:::\____\           |::|   |             \:::\   \:::\____\ /:::/    /           
-       |::| \::/____/        \:::\    \               \:::\  /:::/    /           |::|   |              \:::\   \::/    / \::/    /            
-       |::|  ~|               \:::\    \               \:::\/:::/    /            |::|   |               \:::\   \/____/   \/____/             
-       |::|   |                \:::\    \               \::::::/    /             |::|   |                \:::\    \                           
-       \::|   |                 \:::\____\               \::::/    /              \::|   |                 \:::\____\                          
-        \:|   |                  \::/    /                \::/    /                \:|   |                  \::/    /                          
-         \|___|                   \/____/                  \/____/                  \|___|                   \/____/                           
-                                                                                                                                               
-
--->
+<html lang="en">
 
 <head>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175633290-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-175633290-1');
-    </script>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sefa Kozan - Personal Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <meta name="theme-color" content="#111111">
-    <meta name="keywords" content="Sefa Kozan" />
-    <meta name="description" content="Sefa Kozan, I’m a student living in Ankara/Turkey. Fan of technology, web development, and programming also interested in education.">
-    <meta name="og:title" property="og:title" content="Sefa Kozan - Personal Website">
-    <meta name="twitter:card" content="Sefa Kozan's Personal Website">
-    <link rel="canonical" href="https://sefakozan.com.tr/">
-    <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
-    <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
-    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Sefa Kozan</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+	<div class="page body-copy">
+		<header class="masthead">
+			<h1 class="masthead-title">Sefa Kozan</h1>
+			<nav class="masthead-nav" aria-label="Primary">
+				<a class="nav-primary active" href="/">Home</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
 
-    <nav id="overlay">
-        <img class="hvr-skew-backward" src="assets/cross.svg" id="close-menu-btn">
-        <ul>
-            <li><a id="close-menu" id="hover-id" class="hvr-float" href="https://sefakozan.com.tr">home</a>
-                <p class="text-hover">127.0.0.1??</p>
-                <span></span>
-            </li>
-            <li><a class="hvr-float" id="hover-id" href="https://about.me/sefakozan">about me</a>
-                <p class="text-hover">stalker?!</p>
-                <span></span>
-            </li>
-            <li><a class="hvr-float" id="hover-id" href="https://github.com/sefakozan">portfolio</a>
-                <p class="text-hover">in the blue sky..</p>
-                <span></span>
-            </li>
-        </ul>
-    </nav>
+				<a class="nav-primary" href="/building/">Builds</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
 
-    <div class="header">
+				<a href="SefaKozan-CV-TR.pdf" target="_blank" rel="noreferrer">Resume</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
 
-        <p id="homepage-logo" class="draggable"><span class="reddish">@</span>mskozan<span class="blueish">.</span></p>
+				<a href="https://leetcode.com/u/Kozan-/" target="_blank" rel="noreferrer">LeetCode</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
 
-        <img class="draggable" id="hamburger-menu" src="assets/hamburgermenu.svg">
-    </div>
-    <div id="content-text-logo">
-        <div class="content-text">
-            <div id="title-div">
-                <p id="title">
-                    <p class="draggable" id="title"> <span class="reddish">co</span>de</p>
-                    <p class="draggable" id="title">is</p>
-                    <p class="draggable" id="title"><span id="typed3"></span> </p>
-                </p>
+				<a href="https://www.linkedin.com/in/sefakozan" target="_blank" rel="noreferrer">LINKEDIN</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
 
-            </div>
-            <div id="name-div">
-                <span class="draggable" id="name4"><span class="reddish">Se</span>fa</span>
-                <span id="typed4" class="draggable"></span>
-            </div>
-        </div>
-    </div>
-    
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,600i,700" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
-    <script src="scripts.js"></script>
+				<a href="https://github.com/sefakozan" target="_blank" rel="noreferrer">GITHUB</a>
+				<span class="nav-dot" aria-hidden="true">&middot;</span>
 
+				<a class="nav-lang active" href="/" aria-label="Current language: English">
+					<img src="res/us.svg" alt="" aria-hidden="true" class="language-flag">
+				</a>
+
+				<span class="nav-dot" aria-hidden="true">/</span>
+
+				<a class="nav-lang" href="/tr/" aria-label="Switch to Turkish">
+					<img src="res/tr.svg" alt="" aria-hidden="true" class="language-flag">
+				</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="intro-grid">
+				<div class="intro-copy">
+					<p>Hi, I'm Sefa. Nice to meet you! <br>I'm a 2nd-year Software Engineering major at <a
+							class="accent-link">Fırat University</a>.</p>
+
+					<p>I like to optimize for excellence. To me, this means directing my habits, projects, standards,
+						and environment toward becoming better each day. It means learning through failure to sharpen my
+						ability, depth, and character so success becomes a byproduct rather than the goal.</p>
+
+					<p>Developing backend with Java/Spring Boot and high performance and modular systems with Golang; I
+						am a software engineer candidate with a focus on AI technologies such as LLM/RAG.
+						I am constantly improving my algorithm and problem-solving skills with current projects. By
+						effectively using AI technologies in my development process, I increase my learning speed,
+						improve my code quality, and solve problems more efficiently.
+					</p>
+
+					<p>Outside of this, I like to see new places in the world, watch movies, listen to music, swim,
+						walk, play sports, and find happiness in the little things.
+						My interest in technology is not where it is today, but how far its limits can be pushed.
+						There's a quote by Arthur C. Clarke that I particularly like:
+					</p>
+
+					<blockquote class="highlight-quote">
+						<p><a class="accent-link">Any sufficiently advanced technology is indistinguishable from
+								magic.</a></p>
+					</blockquote>
+				</div>
+
+				<aside class="side-col">
+					<figure class="snapshot portrait-figure">
+						<img src="res/sefakozan-portrait.jpg" alt="Sefa Kozan portrait" />
+					</figure>
+
+					<div class="potd">
+						<h2 class="section-label">Picture of the moment</h2>
+						<figure class="snapshot">
+							<button type="button" class="potd-button" id="potd-button" aria-label="Expand picture">
+								<img id="potd-img" src="res/photos/eiffel-tower.jpg" alt="Eiffel Tower, Paris" />
+							</button>
+						</figure>
+						<p class="potd-note" id="potd-note"><span id="potd-location">Eiffel Tower, Paris</span></p>
+					</div>
+				</aside>
+			</section>
+
+			<footer class="page-footer">
+				<span>2026 &copy; Sefa Kozan</span>
+				<span>Ankara, TÜRKİYE</span>
+			</footer>
+		</main>
+	</div>
+
+	<dialog class="lightbox" id="lightbox" aria-label="Expanded picture of the day">
+		<img id="lightbox-img" src="" alt="" />
+		<button type="button" class="lightbox-button lightbox-close" id="lightbox-close"
+			aria-label="Close">&times;</button>
+	</dialog>
+
+	<script>
+		(function () {
+			var photos = [
+				{ f: "eiffel-tower.jpg", n: "Eiffel Tower, Paris" },
+				{ f: "colosseum.jpg", n: "Colosseum, Rome" },
+				{ f: "taj-mahal.jpg", n: "Taj Mahal, Agra" },
+				{ f: "great-wall-of-china.jpg", n: "Great Wall of China" },
+				{ f: "machu-picchu.jpg", n: "Machu Picchu, Peru" },
+				{ f: "pyramids-of-giza.jpg", n: "Pyramids of Giza, Egypt" },
+				{ f: "statue-of-liberty.jpg", n: "Statue of Liberty, New York" },
+				{ f: "christ-the-redeemer.jpg", n: "Christ the Redeemer, Rio de Janeiro" },
+				{ f: "sydney-opera-house.jpg", n: "Sydney Opera House, Australia" },
+				{ f: "petra.jpg", n: "Petra, Jordan" },
+				{ f: "acropolis-of-athens.jpg", n: "Acropolis, Athens" },
+				{ f: "stonehenge.jpg", n: "Stonehenge, England" },
+				{ f: "big-ben.jpg", n: "Big Ben, London" },
+				{ f: "mount-fuji.jpg", n: "Mount Fuji, Japan" },
+				{ f: "burj-khalifa.jpg", n: "Burj Khalifa, Dubai" },
+				{ f: "sagrada-familia.jpg", n: "Sagrada Família, Barcelona" },
+				{ f: "leaning-tower-of-pisa.jpg", n: "Leaning Tower of Pisa, Italy" },
+				{ f: "chichen-itza.jpg", n: "Chichen Itza, Mexico" },
+				{ f: "angkor-wat.jpg", n: "Angkor Wat, Cambodia" },
+				{ f: "saint-basils-cathedral.jpg", n: "Saint Basil's Cathedral, Moscow" },
+				{ f: "golden-gate-bridge.jpg", n: "Golden Gate Bridge, San Francisco" },
+				{ f: "grand-canyon.jpg", n: "Grand Canyon, Arizona" },
+				{ f: "mount-everest.jpg", n: "Mount Everest, Himalayas" },
+				{ f: "niagara-falls.jpg", n: "Niagara Falls, Canada/USA" },
+				{ f: "venice-canals.jpg", n: "Grand Canal, Venice" },
+				{ f: "hagia-sophia.jpg", n: "Hagia Sophia, Istanbul" },
+				{ f: "cappadocia.jpg", n: "Cappadocia, Türkiye" },
+				{ f: "pamukkale.jpg", n: "Pamukkale Travertines, Türkiye" },
+				{ f: "ephesus.jpg", n: "Ephesus Ancient City, Türkiye" },
+				{ f: "mount-rushmore.jpg", n: "Mount Rushmore, South Dakota" },
+				{ f: "victoria-falls.jpg", n: "Victoria Falls, Zambia/Zimbabwe" },
+				{ f: "iguazu-falls.jpg", n: "Iguazu Falls, Argentina/Brazil" },
+				{ f: "borobudur.jpg", n: "Borobudur Temple, Indonesia" },
+				{ f: "alhambra.jpg", n: "Alhambra Palace, Granada" },
+				{ f: "neuschwanstein-castle.jpg", n: "Neuschwanstein Castle, Germany" },
+				{ f: "louvre-museum.jpg", n: "Louvre Museum, Paris" },
+				{ f: "tower-bridge.jpg", n: "Tower Bridge, London" },
+				{ f: "notre-dame-paris.jpg", n: "Notre-Dame Cathedral, Paris" },
+				{ f: "mont-saint-michel.jpg", n: "Mont-Saint-Michel, France" },
+				{ f: "banff-national-park.jpg", n: "Banff National Park, Canada" },
+				{ f: "santorini.jpg", n: "Santorini Island, Greece" },
+				{ f: "mount-kilimanjaro.jpg", n: "Mount Kilimanjaro, Tanzania" },
+				{ f: "table-mountain.jpg", n: "Table Mountain, Cape Town" },
+				{ f: "milford-sound.jpg", n: "Milford Sound, New Zealand" },
+				{ f: "forbidden-city.jpg", n: "Forbidden City, Beijing" },
+				{ f: "terracotta-army.jpg", n: "Terracotta Army, Xi'an" },
+				{ f: "fushimi-inari-taisha.jpg", n: "Fushimi Inari Shrine, Kyoto" },
+				{ f: "kinkaku-ji.jpg", n: "Golden Pavilion (Kinkaku-ji), Kyoto" },
+				{ f: "marina-bay-sands.jpg", n: "Marina Bay Sands, Singapore" },
+				{ f: "ha-long-bay.jpg", n: "Ha Long Bay, Vietnam" },
+				{ f: "lake-bled.jpg", n: "Lake Bled, Slovenia" },
+				{ f: "plitvice-lakes.jpg", n: "Plitvice Lakes, Croatia" },
+				{ f: "meteora.jpg", n: "Meteora Monasteries, Greece" },
+				{ f: "matterhorn.jpg", n: "Matterhorn, Switzerland" },
+				{ f: "hallstatt.jpg", n: "Hallstatt Village, Austria" },
+				{ f: "brandenburg-gate.jpg", n: "Brandenburg Gate, Berlin" },
+				{ f: "palace-of-versailles.jpg", n: "Palace of Versailles, France" },
+				{ f: "brooklyn-bridge.jpg", n: "Brooklyn Bridge, New York" },
+				{ f: "empire-state-building.jpg", n: "Empire State Building, New York" },
+				{ f: "yellowstone.jpg", n: "Yellowstone Park, USA" },
+				{ f: "yosemite-valley.jpg", n: "Yosemite Valley, California" },
+				{ f: "monument-valley.jpg", n: "Monument Valley, Arizona/Utah" },
+				{ f: "antelope-canyon.jpg", n: "Antelope Canyon, Arizona" },
+				{ f: "salar-de-uyuni.jpg", n: "Salar de Uyuni, Bolivia" },
+				{ f: "torres-del-paine.jpg", n: "Torres del Paine, Chile" },
+				{ f: "easter-island-moai.jpg", n: "Easter Island Moai, Chile" },
+				{ f: "perito-moreno-glacier.jpg", n: "Perito Moreno Glacier, Argentina" },
+				{ f: "galapagos-islands.jpg", n: "Galápagos Islands, Ecuador" },
+				{ f: "moraine-lake.jpg", n: "Moraine Lake, Canada" },
+				{ f: "mount-cook.jpg", n: "Mount Cook, New Zealand" },
+				{ f: "great-barrier-reef.jpg", n: "Great Barrier Reef, Australia" },
+				{ f: "uluru.jpg", n: "Uluru (Ayers Rock), Australia" },
+				{ f: "twelve-apostles.jpg", n: "Twelve Apostles, Australia" },
+				{ f: "sigiriya.jpg", n: "Sigiriya Rock Fortress, Sri Lanka" },
+				{ f: "bagan.jpg", n: "Bagan Temples, Myanmar" },
+				{ f: "shwedagon-pagoda.jpg", n: "Shwedagon Pagoda, Myanmar" },
+				{ f: "wat-arun.jpg", n: "Wat Arun Temple, Bangkok" },
+				{ f: "tiger-nest-monastery.jpg", n: "Paro Taktsang (Tiger's Nest), Bhutan" },
+				{ f: "potala-palace.jpg", n: "Potala Palace, Tibet" },
+				{ f: "blue-mosque-istanbul.jpg", n: "Blue Mosque, Istanbul" },
+				{ f: "sumela-monastery.jpg", n: "Sumela Monastery, Trabzon" },
+				{ f: "mount-nemrut.jpg", n: "Mount Nemrut, Türkiye" },
+				{ f: "mount-ararat.jpg", n: "Mount Ararat, Türkiye" },
+				{ f: "maidens-tower-istanbul.jpg", n: "Maiden's Tower, Istanbul" },
+				{ f: "abu-simbel.jpg", n: "Abu Simbel Temples, Egypt" },
+				{ f: "karnak-temple.jpg", n: "Karnak Temple, Luxor" },
+				{ f: "sahara-desert.jpg", n: "Sahara Desert, North Africa" },
+				{ f: "chefchaouen.jpg", n: "Chefchaouen (Blue City), Morocco" },
+				{ f: "marrakech.jpg", n: "Marrakesh Medina, Morocco" },
+				{ f: "lalibela.jpg", n: "Rock-Hewn Churches, Lalibela" },
+				{ f: "avenue-of-the-baobabs.jpg", n: "Avenue of the Baobabs, Madagascar" },
+				{ f: "deadvlei.jpg", n: "Deadvlei Clay Pan, Namibia" },
+				{ f: "serengeti.jpg", n: "Serengeti National Park, Tanzania" },
+				{ f: "tsingy-de-bemaraha.jpg", n: "Tsingy de Bemaraha, Madagascar" },
+				{ f: "mont-blanc.jpg", n: "Mont Blanc, Alps" },
+				{ f: "cliffs-of-moher.jpg", n: "Cliffs of Moher, Ireland" },
+				{ f: "giants-causeway.jpg", n: "Giant's Causeway, Northern Ireland" },
+				{ f: "geirangerfjord.jpg", n: "Geirangerfjord, Norway" },
+				{ f: "vatican-st-peters.jpg", n: "St. Peter's Basilica, Vatican City" }
+			];
+			var image = document.getElementById("potd-img");
+			var locationSpan = document.getElementById("potd-location");
+			if (!image) return;
+
+			var isReload = false;
+			if (window.performance && window.performance.getEntriesByType) {
+				var navEntries = window.performance.getEntriesByType("navigation");
+				if (navEntries.length > 0 && navEntries[0].type === "reload") {
+					isReload = true;
+				}
+			}
+			if (!isReload && window.performance && window.performance.navigation) {
+				if (window.performance.navigation.type === 1) {
+					isReload = true;
+				}
+			}
+
+			var selectedIndex;
+			var savedIndex = sessionStorage.getItem("selectedPhotoIndex");
+
+			if (isReload || savedIndex === null) {
+				selectedIndex = Math.floor(Math.random() * photos.length);
+				sessionStorage.setItem("selectedPhotoIndex", selectedIndex);
+			} else {
+				selectedIndex = parseInt(savedIndex, 10);
+				if (isNaN(selectedIndex) || selectedIndex < 0 || selectedIndex >= photos.length) {
+					selectedIndex = Math.floor(Math.random() * photos.length);
+					sessionStorage.setItem("selectedPhotoIndex", selectedIndex);
+				}
+			}
+
+			var selected = photos[selectedIndex];
+
+			image.src = "res/photos/" + selected.f;
+			image.alt = selected.n;
+			if (locationSpan) {
+				locationSpan.textContent = selected.n;
+			}
+
+			// Click the picture to expand it, uncropped, in a lightbox.
+			var dialog = document.getElementById("lightbox");
+			var button = document.getElementById("potd-button");
+			if (dialog && button && typeof dialog.showModal === "function") {
+				var expanded = document.getElementById("lightbox-img");
+
+				button.addEventListener("click", function () {
+					expanded.src = image.src;
+					expanded.alt = image.alt;
+					dialog.showModal();
+				});
+
+				document
+					.getElementById("lightbox-close")
+					.addEventListener("click", function () {
+						dialog.close();
+					});
+
+				dialog.addEventListener("click", function (event) {
+					if (event.target === dialog) {
+						dialog.close();
+					}
+				});
+			}
+		})();
+	</script>
+	<script src="nav.js"></script>
 </body>
 
 </html>

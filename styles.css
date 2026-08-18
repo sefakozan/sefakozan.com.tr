@@ -485,6 +485,24 @@ img {
 	content: counter(build, decimal-leading-zero);
 }
 
+.build-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 16px;
+	margin-bottom: 8px;
+	flex-wrap: wrap;
+}
+
+.build-header .build-title {
+	margin-bottom: 0;
+}
+
+.build-header p.lead {
+	margin-bottom: 0;
+	white-space: nowrap;
+}
+
 .build-title {
 	margin: 0 0 8px;
 	font-size: 1.42rem;

@@ -25,7 +25,7 @@ body {
 	font-variant-numeric: oldstyle-nums;
 	line-height: 1.68;
 	font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "lnum" 1, "tnum" 1;
+	font-feature-settings: "lnum" 1, "tnum" 1;
 }
 
 a {
@@ -124,10 +124,10 @@ img {
 }
 
 .language-flag {
-    width: 23px !important;
-    height: 15px !important;
-    object-fit: cover;
-    display: block;
+	width: 23px !important;
+	height: 15px !important;
+	object-fit: cover;
+	display: block;
 }
 
 .nav-dot {
@@ -185,7 +185,7 @@ img {
 	transition: transform 180ms ease, opacity 140ms ease;
 }
 
-.nav-toggle-bars span + span {
+.nav-toggle-bars span+span {
 	margin-top: 6px;
 }
 
@@ -223,7 +223,7 @@ img {
 	font-style: italic;
 	margin: 0 0 40px;
 	font-variant-numeric: lining-nums;
-    font-feature-settings: "lnum" 1, "tnum" 1;
+	font-feature-settings: "lnum" 1, "tnum" 1;
 }
 
 .accent-link,
@@ -567,7 +567,7 @@ img {
 		gap: 40px;
 	}
 
-	.intro-grid > .side-col {
+	.intro-grid>.side-col {
 		order: -1;
 		position: static;
 		justify-self: center;
@@ -597,7 +597,7 @@ img {
 	}
 
 	/* inline row keeps only Home / Builds / Photos plus the hamburger */
-	.has-js .masthead-nav > *:not(.nav-primary):not(.nav-lang):not(.nav-toggle) {
+	.has-js .masthead-nav>*:not(.nav-primary):not(.nav-lang):not(.nav-toggle) {
 		display: none;
 	}
 
@@ -609,7 +609,7 @@ img {
 		width: 20px;
 	}
 
-	.has-js .nav-toggle-bars span + span {
+	.has-js .nav-toggle-bars span+span {
 		margin-top: 5px;
 	}
 

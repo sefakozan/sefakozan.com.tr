@@ -1,0 +1,11 @@
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Python cache (if run locally)
+__pycache__/
+*.py[cod]
